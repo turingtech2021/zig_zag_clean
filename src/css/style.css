@@ -7,7 +7,108 @@
 
 html{
     font-family: 'Ubuntu', sans-serif;
+    font-size: 100%;
 }
 
+.icon{
+    color: rgb(109, 226, 251);
+    font-size: 1.2rem;
+    margin: 0 .5rem;
+}
 
+.hidden{
+    display: none;
+}
+
+.header-top{
+    background-color: rgb(59, 62, 70);
+    padding: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap
+}
+
+.header-top-left{
+    color: #fff;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-top-right{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav{
+    padding: 1.4rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-left-logo{
+    height: 3rem;
+}
+
+.nav-right{
+    width: 50%;
+}
+
+.nav-right ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-right ul li{
+    list-style: none;
+}
+
+.nav-right ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    letter-spacing: .2rem;
+    font-weight: 400;
+}
+
+.nav-right ul li a:hover{
+    border-bottom: .3rem solid rgb(109, 226, 251);
+}
+
+.swiper-container {
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+  }
+
+  .swiper-slide img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+
+
+@media only screen and (max-width: 768px) {
+
+    html{
+        font-size: 80%;
+    }
+
+    .header-top-left{
+        width: 100%;
+    }
+
+    .header-top-right{
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 1.4rem;
+    }
+
+    .nav-right{
+        display: none;
+    }
+
+
+  }
 
