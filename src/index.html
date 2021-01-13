@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,64 +11,195 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <div class="header-top">
 
             <div class="header-top-left">
-                <p><i class="icofont-clock-time icon"></i>MON-SUN: 7.00 AM - 6.00 PM</p>
-                <p><i class="icofont-phone icon"></i>+91 9876543210</p>
+                <p><i class="icofont-email icon"></i><a href="mailto:zigzagclean.india@gmail.com"
+                        style="color: #fff; text-decoration: none;">zigzagclean.india@gmail.com</a></p>
+                <p><i class="icofont-phone icon"></i>+91 9355 34 80 80</p>
             </div>
 
             <div class="header-top-right">
                 <div>
-                    <i class="icofont-facebook icon"></i>
-                    <i class="icofont-twitter icon"></i>
-                    <i class="icofont-google-plus icon"></i>
+                    <a href="https://www.facebook.com/ZigZagClean.India/" target="blank"><i
+                            class="icofont-facebook icon"></i></a>
+                    <a href="https://www.instagram.com/zigzagclean/" target="blank"><i
+                            class="icofont-instagram icon"></i></a>
+                    <a href="https://wa.me/message/AAFSWBMOTFBZH1" target="blank"><i
+                            class="icofont-whatsapp icon"></i></a>
                 </div>
             </div>
         </div>
-
-        <nav class="nav">
-            <div class="nav-left">
-                <img src="./assets/logo.png" class="nav-left-logo"/>
-            </div>
-            
-            <div class="nav-right">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">How to Book?</a></li>
-                </ul>
-            </div>
-        </nav>
     </header>
 
+    <nav class="nav">
+        <div class="nav-left">
+            <img src="./assets/logo.png" class="nav-left-logo" />
+        </div>
+
+        <div class="nav-right">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#Services_nd_Pricing">Services & Pricing</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#">Why Us?</a></li>
+                <li><a href="#">How to Book?</a></li>
+            </ul>
+        </div>
+    </nav>
 
 
-      <!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="./assets/swiper-img/img-1.jpg" alt="slide-1"></div>
-      <div class="swiper-slide"><img src="./assets/swiper-img/img-2.jpg" alt="slide-2"></div>
-      <div class="swiper-slide"><img src="./assets/swiper-img/img-3.jpg" alt="slide-3"></div>
-      <div class="swiper-slide"><img src="./assets/swiper-img/img-4.jpg" alt="slide-4"></div>
+
+    <div class="swiper-container" id="home">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./assets/swiper-img/img-1.jpg" alt="slide-1"></div>
+            <div class="swiper-slide"><img src="./assets/swiper-img/img-2.jpg" alt="slide-2"></div>
+            <div class="swiper-slide"><img src="./assets/swiper-img/img-3.jpg" alt="slide-3"></div>
+            <div class="swiper-slide"><img src="./assets/swiper-img/img-4.jpg" alt="slide-4"></div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <article class="swiper-article">
+            <p class="swiper-article-header">
+                Complete Cleaning <span class="swiper-article-header-highlight">Services At</span> Your <span
+                    class="swiper-article-header-highlight">Doorstep</span>
+            </p>
+
+            <p class="swiper-article-body">
+                We provide trained proffesionals with some best set of tools to shine your vehicle.<br>
+
+            </p>
+
+            <a href="#" class="swiper-article-btn">Book Now <i class="icofont-rounded-right"></i></a>
+        </article>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+
+    <div id="Services_nd_Pricing">
+        <h2 class="heading">Services & Pricing</h2>
+
+        <div class="card-group">
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front"
+                        style="background-image: linear-gradient(to bottom right,rgb(179, 154, 238), rgba(71, 47, 212, 0.884), rgba(220, 220, 255, 0.1));">
+                        <div class="flip-card-container">
+                            <h2>Standard Wash</h2>
+                            <p>Foam Wash</p>
+                            <p>Dashboard Polish</p>
+                            <p>Vacuuming</p>
+                            <p>Mat Cleaning</p>
+                            <p>Tyre clean & polish</p>
+                            <p>Fresh odor</p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back"
+                        style="background-image: linear-gradient(to bottom right, rgba(71, 47, 212, 0.884), rgb(179, 154, 238));">
+                        <div class="flip-card-container">
+                            <img src="./assets/logo.png" style="height: 3em;">
+                            <h2>Standard Wash</h2>
+                            <p>Hatchback <strong>₹349</strong></p>
+                            <p>Sedan <strong>₹399</strong></p>
+                            <p>SUV / MUV <strong>₹499</strong></p>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front"
+                        style="background-image: linear-gradient(to bottom right,rgb(245, 202, 122), rgb(255, 95, 3), rgba(245, 190, 158, 0.932));">
+                        <div class="flip-card-container">
+                            <h2>Delux Wash</h2>
+                            <p>Standard Package +</p>
+                            <p>Roof Dry Clean</p>
+                            <p>Doors Cleaning</p>
+                            <p>Water Tank Filling With Windshield Chemical</p>
+                            <p>Black Plastic Part Polishing</p>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="flip-card-back"
+                        style="background-image: linear-gradient(to bottom right,rgb(245, 202, 122), rgb(255, 95, 3));">
+                        <div class="flip-card-container">
+                            <img src="./assets/logo.png" style="height: 3em;">
+                            <h2>Delux Wash</h2>
+                            <p>Hatchback <strong>₹499</strong></p>
+                            <p>Sedan <strong>₹649</strong></p>
+                            <p>SUV / MUV <strong>₹799</strong></p>
+                            <p>Luxary <strong>₹999</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front"
+                        style="background-image: linear-gradient(to bottom right,rgb(250, 174, 174), rgb(216, 33, 33), rgba(220, 220, 255, 0.1));">
+                        <div class="flip-card-container">
+                            <h2>Platinum Wash</h2>
+                            <p>Delux Package +</p>
+                            <p>Seats Dry Clean</p>
+                            <p>Engine Cleaning</p>
+                            <br><br><br><br><br><br><br>
+                        </div>
+                    </div>
+                    <div class="flip-card-back"
+                        style="background-image: linear-gradient(to bottom right,rgb(250, 174, 174), rgba(216, 33, 33, 0.925));">
+                        <div class="flip-card-container">
+                            <img src="./assets/logo.png" style="height: 3em;">
+                            <h2>Platinum Wash</h2>
+                            <p>Hatchback <strong>₹999</strong></p>
+                            <p>Sedan <strong>₹1,049</strong></p>
+                            <p>SUV / MUV <strong>₹1,249</strong></p>
+                            <p>Luxary <strong>₹1,450</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front"
+                        style="background-image: linear-gradient(to bottom right,rgb(174, 250, 178), rgb(33, 216, 64), rgba(220, 220, 255, 0.1));">
+                        <div class="flip-card-container">
+                            <h2>Sofa Cleaning</h2>
+                            <p>Dry Vacuum Cleaning</p>
+                            <p>Wet Vacuum Cleaning</p>
+                            <p>Shampooing Sofa</p>
+                            <br><br><br><br><br><br><br>
+                        </div>
+                    </div>
+                    <div class="flip-card-back"
+                        style="background-image: linear-gradient(to bottom right,rgb(199, 253, 201), rgba(33, 216, 64, 0.925))">
+                        <div class="flip-card-container">
+                            <img src="./assets/logo.png" style="height: 3em;">
+                            <h2>Sofa Cleaning</h2>
+                            <p>Per Seat <strong>₹180</strong></p>
+                            <br><br><br><br><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-
-  </div>
-
-
-
+    <div id="gallery">
+        <h2 class="heading">Gallery</h2>
+        <img src="./assets/gallery/collage.jpg" alt="Gallery">
+    </div>
 
     <script src="./js/index.js"></script>
     <script src="./js/test.js"></script>
 </body>
+
 </html>
