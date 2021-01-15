@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 }
 
 html{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 100%;
     scroll-behavior: smooth;
 }
@@ -16,6 +16,11 @@ html{
     color: rgb(109, 226, 251);
     font-size: 1.2rem;
     margin: 0 .5rem;
+}
+
+.large_icon{
+    font-size: 2rem;
+    transform: scale(4);
 }
 
 
@@ -60,7 +65,7 @@ html{
 }
 
 .nav-right{
-    width: 50%;
+    width: 60%;
 }
 
 .nav-right ul{
@@ -111,7 +116,6 @@ html{
   }
 
   .swiper-article-header{
-      font-family: 'Roboto Slab', serif;
       color: #fff;
       font-size: 2.5rem;
       font-weight: 500;
@@ -156,13 +160,19 @@ html{
 }
 
 #Services_nd_Pricing{
-    width:100%;
+    width:95vw;
+    margin: auto;
  }
 
  .card-group{
      display: flex;
      justify-content: space-evenly;
      flex-wrap: wrap;
+     background-image: url('../assets/services_nd_pricing/img.jpg'), linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: 100% 100%;
+     margin: 2rem 0;
  }
 
   .flip-card {
@@ -216,13 +226,15 @@ html{
   } 
 
   .flip-card-container h2{
+    font-weight: 300;
     font-size: 1.5em;
     text-decoration: underline;
     margin: 1em 0;
  }
  
  .flip-card-container p{
-    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 200;
     margin: .5em 0;
     letter-spacing: .1em;
 }
@@ -231,12 +243,87 @@ html{
     height: 80vh;
     width: 95vw;
     margin: auto;
+    overflow: hidden;
 }
 
 #gallery img{   
+    margin: 2rem 0;
     height: 100%;
     width: 100%;
 }
+
+#why_us{
+    width: 95vw;
+    margin: auto;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    margin: 3rem 0;
+    display: flex;
+}
+
+.container_child-1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_child-2{
+    width: 50%;
+}
+
+.article-header{
+    margin: 1rem 0;
+}
+
+.article-body{
+    font-weight: bold;
+    letter-spacing: .1rem;
+    word-spacing: .075rem;
+}
+
+#how_to_book{
+    width: 95vw;
+    margin: auto;
+}
+
+.book{
+    background-image: linear-gradient(to right bottom, rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+    border-radius: 1rem;
+    padding: 1rem 0;
+    margin: 4rem 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.book-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-icon{
+    /* color: rgb(41, 40, 40); */
+    font-size: 4rem;
+}
+
+.book-desc{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: .5rem 0;
+}
+
+.map{
+    height: 40vh;
+    width: 95vw;
+    margin: 1rem  auto;
+}
+
 
 
 @media only screen and (max-width: 768px) {
