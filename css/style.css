@@ -10,6 +10,7 @@ html{
     font-family: 'Roboto Slab', serif;
     font-size: 100%;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .icon{
@@ -62,6 +63,7 @@ html{
 
 .nav-left-logo{
     height: 3rem;
+    transform: scale(1.8);
 }
 
 .nav-right{
@@ -161,7 +163,7 @@ html{
 
 #Services_nd_Pricing{
     width:95vw;
-    margin: auto;
+    margin: 0 auto;
  }
 
  .card-group{
@@ -242,7 +244,7 @@ html{
 #gallery{
     height: 80vh;
     width: 95vw;
-    margin: auto;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -254,7 +256,7 @@ html{
 
 #why_us{
     width: 95vw;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .container{
@@ -280,6 +282,8 @@ html{
 }
 
 .article-body{
+    height: 30vh;
+    overflow: auto;
     font-weight: bold;
     letter-spacing: .1rem;
     word-spacing: .075rem;
@@ -308,7 +312,6 @@ html{
 }
 
 .book-icon{
-    /* color: rgb(41, 40, 40); */
     font-size: 4rem;
 }
 
@@ -324,7 +327,37 @@ html{
     margin: 1rem  auto;
 }
 
+footer{
+    width: 95vw;
+    color: #fff;
+    background-color: rgb(29, 29, 29);
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+}
 
+.footer-left-mark{
+    border-left: rgb(236, 62, 62) .2rem solid;
+    padding: 0 .5rem;
+}
+
+.sec-1,.sec-2,.sec-3{
+    width: 30%;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul li{
+    margin: .8rem 0;
+}
+
+footer ul li a{
+    color: #fff;
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -355,10 +388,19 @@ html{
     }
 
     .flip-card {
-        width: 25rem;
-        height: 28rem;
+        width: 22rem;
+        height: 24rem;
         font-size: 1.2rem;
       }
+
+      #gallery{
+        height: 60vh;
+    }
+
+    .sec-1,.sec-2,.sec-3{
+        width: 90%;
+        margin: 1rem;
+    }
 
   }
 
