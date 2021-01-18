@@ -43,7 +43,7 @@
         <div class="nav-right">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#Services_nd_Pricing">Services & Pricing</a></li>
+                <li><a href="#services_nd_pricing">Services & Pricing</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#why_us">Why Us?</a></li>
                 <li><a href="#how_to_book">How To Book?</a></li>
@@ -77,11 +77,11 @@
 
             </p>
 
-            <a href="#" class="swiper-article-btn">Book Now <i class="icofont-rounded-right"></i></a>
+            <a href="#" class="swiper-article-btn" id="book-now">Book Now <i class="icofont-rounded-right"></i></a>
         </article>
     </div>
 
-    <div id="Services_nd_Pricing">
+    <div id="services_nd_pricing">
         <h2 class="heading">Services & Pricing</h2>
 
         <div class="card-group">
@@ -89,7 +89,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front"
-                        style="background-image: linear-gradient(to bottom right,rgb(179, 154, 238), rgba(71, 47, 212, 0.884), rgb(220, 220, 255));">
+                        style="background-image: linear-gradient(to bottom right,rgb(179, 154, 238), rgba(138, 47, 212, 0.884), rgb(232, 220, 255));">
                         <div class="flip-card-container">
                             <h2>Standard Wash</h2>
                             <p>Foam Wash</p>
@@ -172,7 +172,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front"
-                        style="background-image: linear-gradient(to bottom right,rgb(113, 247, 120), rgb(9, 252, 49), rgb(117, 248, 137));">
+                        style="background-image: linear-gradient(to bottom right,rgb(120, 122, 235), rgb(18, 31, 216), rgb(119, 128, 206));">
                         <div class="flip-card-container">
                             <h2>Sofa Cleaning</h2>
                             <p>Dry Vacuum Cleaning</p>
@@ -182,7 +182,7 @@
                         </div>
                     </div>
                     <div class="flip-card-back"
-                        style="background-image: linear-gradient(to bottom right,rgb(199, 253, 201), rgba(33, 216, 64, 0.925))">
+                        style="background-image: linear-gradient(to bottom right,rgb(163, 162, 245), rgb(22, 53, 231))">
                         <div class="flip-card-container">
                             <img src="./assets/logo.png" style="height: 3em;">
                             <h2>Sofa Cleaning</h2>
@@ -294,8 +294,8 @@
                 <h2 class="article-header footer-left-mark">Site Link</h2>
                 <div>
                     <ul>
-                        <li><a href="#Home">Home</a></li>
-                        <li><a href="#Services_nd_Pricing">Services & Pricing</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services_nd_pricing">Services & Pricing</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#why_us">Why Us?</a></li>
                         <li><a href="#how_to_book">How To Book?</a></li>
@@ -328,8 +328,8 @@
 
                         <li>
                             <p><i class="icofont-google-map icon"></i>P-437, Near Huda Market Sector-40 Main Road,
-                                Gurugram,
-                                Haryana</p>
+                            Gurugram,
+                            Haryana</p>
                         </li>
                     </ul>
                 </div>
@@ -338,6 +338,18 @@
     </footer>
 
     <div class="copyright">Copyright Zig Zag Clean© 2017-2021 - All rights reserved</div>
+
+    <div id="form-container" class="form-container hidden">
+        
+        <form>
+            <p id="form-close" style="text-align: end;">&#10006;</p>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="number" name="phn_number" placeholder="Phone Number" required>
+            <textarea name="address" placeholder="Address" rows="4" cols="50"></textarea>
+            <button type="submit" class="submit-btn">Book</button>
+        </form>
+    </div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

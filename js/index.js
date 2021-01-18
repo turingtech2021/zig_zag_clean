@@ -16,4 +16,13 @@ function initSwiper() {
     });
 }
 
+const toggleForm = function(e){
+    e.preventDefault();
+    document.querySelector('#form-container').classList.toggle('hidden');
+};
+
+document.getElementById('book-now').addEventListener('click', toggleForm);
+document.getElementById('form-close').addEventListener('click', toggleForm);
+
+
 initSwiper();

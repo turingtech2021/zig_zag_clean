@@ -30,7 +30,11 @@ html{
 
 
 .hidden{
-    display: none;
+    display: none !important;
+}
+
+#home{
+    position: relative;
 }
 
 .header-top{
@@ -165,7 +169,7 @@ html{
     margin: 1rem 0;
 }
 
-#Services_nd_Pricing{
+#services_nd_pricing{
     width:95vw;
     margin: 0 auto;
  }
@@ -372,6 +376,56 @@ footer ul li a{
     text-align: center;
 }
 
+.form-container{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9));
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container form{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form input {
+    width: 100%;
+    margin: .8rem 1rem;
+    padding: .5rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+}
+
+
+.form-container form textarea {
+    margin: .5rem 1rem;
+    padding: .5rem;
+}
+
+.submit-btn{
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(5, 199, 21);
+    width: 100%;
+    margin: .8rem 1rem;
+    padding: .9rem;
+    border: .2rem solid #fff;
+}
+
+#close-form{
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {
 
     html{
@@ -414,6 +468,11 @@ footer ul li a{
         width: 90%;
         margin: 1rem;
     }
+
+    .form-container form{
+     width: 90%;
+    }
+
 
   }
 
