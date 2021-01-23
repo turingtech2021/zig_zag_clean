@@ -13,6 +13,49 @@
 </head>
 
 <body>
+
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "booking";
+
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    function sendMail($name, $email, $phone, $address, $date){
+        $to = "khanshahid9283@gmail.com";//"zigzagclean.india@gmail.com";
+        $subject = "Online Booking $date";
+        $headers = "From: $email";
+        $txt = "$name \n $phone \n $address \n $date";
+        mail($to,$subject,$txt,$headers);
+    }
+
+    $name=$email=$phone=$address=$date=$success_msg=$error_msg="";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+      $name = $_POST["name"];
+      $email = $_POST["email"];
+      $phone = $_POST["phone"];
+      $address = $_POST["address"];
+      $date = date("Y/m/d");
+      $sql = "INSERT INTO booking (name, email, phone, address, date)
+      VALUES ('$name', '$email', '$phone', '$address', '$date')";
+
+      if (mysqli_query($conn, $sql)) {
+        $success_msg= "Booking Successful";
+        sendMail($name, $email, $phone, $address, $date);
+      } else {
+        $error_msg= "Something Went Wrong";
+      }
+
+      mysqli_close($conn);
+    }
+
+  ?>
+
+
     <header class="header" id="home">
         <div class="header-top">
 
@@ -51,7 +94,13 @@
         </div>
     </nav>
 
-
+    <?php
+    if($success_msg){
+        echo "<div class='success-msg'>$success_msg</div>";
+    }else if($error_msg){
+        echo "<div class='error-msg'>$error_msg</div>";
+    }
+    ?>
 
     <div class="swiper-container" id="home">
         <div class="swiper-wrapper">
@@ -89,15 +138,16 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front"
-                        style="background-image: linear-gradient(to bottom right,rgb(179, 154, 238), rgba(138, 47, 212, 0.884), rgb(232, 220, 255));">
+                        style="background-image: linear-gradient(to bottom right,rgb(179, 154, 238), rgba(138, 47, 212, 0.884), rgb(232, 220, 255)); ">
                         <div class="flip-card-container">
                             <h2>Standard Wash</h2>
-                            <p>Foam Wash</p>
+                            <p>Exterior Foam Wash</p>
+                            <p>Foot Mats Cleaning</p>
+                            <p>Interior Vacuuming</p>
                             <p>Dashboard Polish</p>
-                            <p>Vacuuming</p>
-                            <p>Mat Cleaning</p>
-                            <p>Tyre Clean & Polish</p>
-                            <p>Fresh Odor</p>
+                            <p>Tyre Arches Cleaning</p>
+                            <p>Car Perfume Spray</p>
+                            <p>Tyre Polish</p>
                             <br>
                         </div>
                     </div>
@@ -108,7 +158,7 @@
                             <h2>Standard Wash</h2>
                             <p>Hatchback <strong>₹349</strong></p>
                             <p>Sedan <strong>₹399</strong></p>
-                            <p>SUV / MUV <strong>₹499</strong></p>
+                            <p>SUV / MUV <strong>₹449</strong></p>
                             <br><br>
                         </div>
                     </div>
@@ -121,11 +171,11 @@
                         style="background-image: linear-gradient(to bottom right,rgb(245, 202, 122), rgb(255, 95, 3), rgb(247, 211, 190));">
                         <div class="flip-card-container">
                             <h2>Delux Wash</h2>
-                            <p>Standard Package +</p>
-                            <p>Roof Dry Clean</p>
+                            <p>Dry Cleaning of Car Roof </p>
+                            <p>All Side Door Cleaning </p>
                             <p>Doors Cleaning</p>
-                            <p>Water Tank Filling With Windshield Chemical</p>
-                            <p>Black Plastic Part Polishing</p>
+                            <p>Windshield Chemical in Water Tank</p>
+                            <p>Polishing of All The Plastic Black Parts</p>
                             <br><br>
                         </div>
                     </div>
@@ -148,10 +198,11 @@
                     <div class="flip-card-front"
                         style="background-image: linear-gradient(to bottom right,rgb(241, 127, 127), rgb(240, 37, 37), rgb(247, 132, 132));">
                         <div class="flip-card-container">
-                            <h2>Platinum Wash</h2>
-                            <p>Delux Package +</p>
-                            <p>Seats Dry Clean</p>
+                        <h2>Platinum Wash</h2>
+                            <p>All Services of Delux Wash</p>
+                            <p>Dry Cleaning Of Car Seats </p>
                             <p>Engine Cleaning</p>
+                            <p>Exterior Foam Wash </p>
                             <br><br><br><br><br><br><br>
                         </div>
                     </div>
@@ -160,7 +211,7 @@
                         <div class="flip-card-container">
                             <img src="./assets/logo.png" style="height: 3em;">
                             <h2>Platinum Wash</h2>
-                            <p>Hatchback <strong>₹999</strong></p>
+                            <p>Hatchback <strong>₹799</strong></p>
                             <p>Sedan <strong>₹1,049</strong></p>
                             <p>SUV / MUV <strong>₹1,249</strong></p>
                             <p>Luxary <strong>₹1,450</strong></p>
@@ -175,10 +226,10 @@
                         style="background-image: linear-gradient(to bottom right,rgb(120, 122, 235), rgb(18, 31, 216), rgb(119, 128, 206));">
                         <div class="flip-card-container">
                             <h2>Sofa Cleaning</h2>
-                            <p>Dry Vacuum Cleaning</p>
-                            <p>Wet Vacuum Cleaning</p>
-                            <p>Shampooing Sofa</p>
-                            <br><br><br><br><br><br><br>
+                            <p>Dry vacuuming of the front and back side of thesofa usingvacuumcleaner to remove dust</p>
+                            <p>Wet Shampooing of sofa using professional grade solution</p>
+                            <p>Wet vacuuming of sofa to remove dirty water</p>
+                            <br><br><br><br>
                         </div>
                     </div>
                     <div class="flip-card-back"
@@ -341,11 +392,11 @@
 
     <div id="form-container" class="form-container hidden">
         
-        <form>
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <p id="form-close" style="text-align: end;">&#10006;</p>
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
-            <input type="number" name="phn_number" placeholder="Phone Number" required>
+            <input type="number" name="phone" placeholder="Phone Number" required>
             <textarea name="address" placeholder="Address" rows="4" cols="50"></textarea>
             <button type="submit" class="submit-btn">Book</button>
         </form>
