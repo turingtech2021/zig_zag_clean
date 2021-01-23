@@ -24,7 +24,7 @@
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
     function sendMail($name, $email, $phone, $address, $date){
-        $to = "khanshahid9283@gmail.com";//"zigzagclean.india@gmail.com";
+        $to = "zigzagclean.india@gmail.com";
         $subject = "Online Booking $date";
         $headers = "From: $email";
         $txt = "$name \n $phone \n $address \n $date";
