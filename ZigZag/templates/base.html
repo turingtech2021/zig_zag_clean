@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zig Zag Clean- {% block title %} Home {% endblock %}</title>
+    <link rel="shortcut icon" href="{% static './assets/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{% static './css/vendor/icofont/icofont.min.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+</head>
+
+<body>
+    <header class="header" id="home">
+        <div class="header-top">
+
+            <div class="header-top-left">
+                <p><i class="icofont-email icon"></i><a href="mailto:zigzagclean.india@gmail.com"
+                        style="color: #fff; text-decoration: none;">ZigZagClean.India@gmail.com</a></p>
+                <p><i class="icofont-phone icon"></i><a href="tel:+91 9355 34 80 80"
+                    style="color: #fff; text-decoration: none;">+91 9355 34 80 80</a></p>
+            </div>
+
+            <div class="header-top-right">
+                <div>
+                    <a href="https://www.facebook.com/ZigZagClean.India/" class="icon-a" target="blank"><i
+                            class="icofont-facebook icon"></i></a>
+                    <a href="https://www.instagram.com/zigzagclean/" class="icon-a" target="blank"><i
+                            class="icofont-instagram icon"></i></a>
+                    <a href="https://wa.me/message/AAFSWBMOTFBZH1" class="icon-a" target="blank"><i
+                            class="icofont-whatsapp icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% block content %}
+
+
+
+    {% endblock content %}
+
+    <footer>
+
+        <div class="sec-1">
+            <article class="article">
+                <h2 class="article-header footer-left-mark">About Us</h2>
+                <p class="article-body" style="height: auto;">
+                    Zig Zag Clean established its presence in Gurugram in 2017 and has positioned itself as the next
+                    generation of car cleaning and washing services provider.
+                </p>
+            </article>
+        </div>
+
+        <div class="sec-2">
+            <article class="article">
+                <h2 class="article-header footer-left-mark">Site Link</h2>
+                <div>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services_nd_pricing">Services & Pricing</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#why_us">Why Us?</a></li>
+                        <li><a href="#how_to_book">How To Book?</a></li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+
+        <div class="sec-3">
+            <article class="article">
+                <h2 class="article-header footer-left-mark">Connect</h2>
+                <div>
+                    <a href="https://www.facebook.com/ZigZagClean.India/" class="icon-a" target="blank"><i
+                            class="icofont-facebook icon"></i></a>
+                    <a href="https://www.instagram.com/zigzagclean/" class="icon-a" target="blank"><i
+                            class="icofont-instagram icon"></i></a>
+                    <a href="https://wa.me/message/AAFSWBMOTFBZH1" class="icon-a" target="blank"><i
+                            class="icofont-whatsapp icon"></i></a>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <p><i class="icofont-email icon"></i><a href="mailto:zigzagclean.india@gmail.com"
+                                    style="color: #fff; text-decoration: none;">ZigZagClean.India@gmail.com</a></p>
+                        </li>
+
+                        <li>
+                            <p><i class="icofont-phone icon"></i><a href="tel:+91 9355 34 80 80"
+                                    style="color: #fff; text-decoration: none;">+91 9355 34 80 80</a></p>
+                        </li>
+
+                        <li>
+                            <p><i class="icofont-google-map icon"></i>P-437, Near Huda Market Sector-40 Main Road,
+                            Gurugram,
+                            Haryana</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </footer>
+
+    <div class="copyright">Copyright Zig Zag Clean© 2017-2021 - All rights reserved</div>
+
+   
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{% static './js/index.js' %}"></script>
+</body>
+
+</html>
