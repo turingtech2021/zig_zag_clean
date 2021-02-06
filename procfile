@@ -1,0 +1,1 @@
+web: gunicorn zigzagclean.wsgi --log-file -
