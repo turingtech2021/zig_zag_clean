@@ -25,7 +25,7 @@ SECRET_KEY = '(k-9oc!0ia4d1jx#m(w&#)rvggsgwzd4wox%h$^5s1y#0@4z)c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['zig-zag-clean.herokuapp.com']
 
 
 # Application definition
