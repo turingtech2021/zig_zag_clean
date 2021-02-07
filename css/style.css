@@ -247,8 +247,6 @@ html{
       width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
   } 
 
   .flip-card-container h2{
@@ -263,6 +261,12 @@ html{
     font-weight: 200;
     margin: .5em 0;
     letter-spacing: .1em;
+}
+
+.flip-card-container>img{
+    display: inline-block;
+    margin: 1em auto;
+    height: 3em;
 }
 
 #gallery{
@@ -393,8 +397,8 @@ footer ul li a{
 }
 
 .form-container{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9));
     position: absolute;
     top: 0;
@@ -438,9 +442,26 @@ footer ul li a{
     border: .2rem solid #fff;
 }
 
-#close-form{
+#form-close{
     cursor: pointer;
 }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 2rem auto;
+  }
+  
+  td, th {
+    border: .1rem solid #dddddd;
+    text-align: left;
+    padding: .6rem;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
 
 @media only screen and (max-width: 768px) {
 

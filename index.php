@@ -15,21 +15,8 @@
 <body>
 
     <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "booking";
-
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-    function sendMail($name, $email, $phone, $address, $date){
-        $to = "zigzagclean.india@gmail.com";
-        $subject = "Online Booking $date";
-        $headers = "From: $email";
-        $txt = "$name \n $phone \n $address \n $date";
-        mail($to,$subject,$txt,$headers);
-    }
+    include_once('./db.php');
+    include_once('./mail.php');
 
     $name=$email=$phone=$address=$date=$success_msg=$error_msg="";
 
@@ -40,7 +27,7 @@
       $phone = $_POST["phone"];
       $address = $_POST["address"];
       $date = date("Y/m/d");
-      $sql = "INSERT INTO booking (name, email, phone, address, date)
+      $sql = "INSERT INTO bookings (name, email, phone, address, date)
       VALUES ('$name', '$email', '$phone', '$address', '$date')";
 
       if (mysqli_query($conn, $sql)) {
@@ -49,8 +36,6 @@
       } else {
         $error_msg= "Something Went Wrong";
       }
-
-      mysqli_close($conn);
     }
 
   ?>
@@ -62,7 +47,8 @@
             <div class="header-top-left">
                 <p><i class="icofont-email icon"></i><a href="mailto:zigzagclean.india@gmail.com"
                         style="color: #fff; text-decoration: none;">ZigZagClean.India@gmail.com</a></p>
-                <p><i class="icofont-phone icon"></i>+91 9355 34 80 80</p>
+                <p><i class="icofont-phone icon"></i><a href="tel:+919355348080"
+                        style="color: #fff; text-decoration: none;">+91 9355 34 80 80</a></p>
             </div>
 
             <div class="header-top-right">
@@ -148,18 +134,16 @@
                             <p>Tyre Arches Cleaning</p>
                             <p>Car Perfume Spray</p>
                             <p>Tyre Polish</p>
-                            <br>
                         </div>
                     </div>
                     <div class="flip-card-back"
                         style="background-image: linear-gradient(to bottom right, rgba(71, 47, 212, 0.884), rgb(179, 154, 238));">
                         <div class="flip-card-container">
-                            <img src="./assets/logo.png" style="height: 3em;">
+                            <img src="./assets/logo.png" >
                             <h2>Standard Wash</h2>
                             <p>Hatchback <strong>₹349</strong></p>
                             <p>Sedan <strong>₹399</strong></p>
                             <p>SUV / MUV <strong>₹449</strong></p>
-                            <br><br>
                         </div>
                     </div>
                 </div>
@@ -176,13 +160,12 @@
                             <p>Doors Cleaning</p>
                             <p>Windshield Chemical in Water Tank</p>
                             <p>Polishing of All The Plastic Black Parts</p>
-                            <br><br>
                         </div>
                     </div>
                     <div class="flip-card-back"
                         style="background-image: linear-gradient(to bottom right,rgb(245, 202, 122), rgb(255, 95, 3));">
                         <div class="flip-card-container">
-                            <img src="./assets/logo.png" style="height: 3em;">
+                            <img src="./assets/logo.png" >
                             <h2>Delux Wash</h2>
                             <p>Hatchback <strong>₹499</strong></p>
                             <p>Sedan <strong>₹649</strong></p>
@@ -202,14 +185,13 @@
                             <p>All Services of Delux Wash</p>
                             <p>Dry Cleaning Of Car Seats </p>
                             <p>Engine Cleaning</p>
-                            <p>Exterior Foam Wash </p>
-                            <br><br><br><br><br><br><br>
+                            <p>Exterior Foam Wash</p>
                         </div>
                     </div>
                     <div class="flip-card-back"
                         style="background-image: linear-gradient(to bottom right,rgb(250, 87, 87), rgba(253, 19, 19, 0.925));">
                         <div class="flip-card-container">
-                            <img src="./assets/logo.png" style="height: 3em;">
+                            <img src="./assets/logo.png" >
                             <h2>Platinum Wash</h2>
                             <p>Hatchback <strong>₹799</strong></p>
                             <p>Sedan <strong>₹1,049</strong></p>
@@ -229,16 +211,15 @@
                             <p>Dry vacuuming of the front and back side of thesofa usingvacuumcleaner to remove dust</p>
                             <p>Wet Shampooing of sofa using professional grade solution</p>
                             <p>Wet vacuuming of sofa to remove dirty water</p>
-                            <br><br><br><br>
                         </div>
                     </div>
                     <div class="flip-card-back"
                         style="background-image: linear-gradient(to bottom right,rgb(163, 162, 245), rgb(22, 53, 231))">
                         <div class="flip-card-container">
-                            <img src="./assets/logo.png" style="height: 3em;">
+                            <img src="./assets/logo.png" >
                             <h2>Sofa Cleaning</h2>
                             <p>Per Seat <strong>₹180</strong></p>
-                            <br><br><br><br><br><br>
+                            
                         </div>
                     </div>
                 </div>
@@ -374,7 +355,8 @@
                         </li>
 
                         <li>
-                            <p><i class="icofont-phone icon"></i>+91 9355 34 80 80</p>
+                        <p><i class="icofont-phone icon"></i><a href="tel:+919355348080"
+                        style="color: #fff; text-decoration: none;">+91 9355 34 80 80</a></p>
                         </li>
 
                         <li>
@@ -388,7 +370,7 @@
         </div>
     </footer>
 
-    <div class="copyright">Copyright Zig Zag Clean© 2017-2021 - All rights reserved</div>
+    <div class="copyright">Copyright Zig Zag Clean© 2017-<?php echo date("Y");?> - All rights reserved</div>
 
     <div id="form-container" class="form-container hidden">
         
