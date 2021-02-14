@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2021 at 10:13 PM
+-- Generation Time: Feb 14, 2021 at 06:43 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.13
 
@@ -33,8 +33,26 @@ CREATE TABLE `bookings` (
   `email` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `date` varchar(255) NOT NULL
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `bookings`
+--
+
+INSERT INTO `bookings` (`id`, `name`, `email`, `phone`, `address`, `date`) VALUES
+(1, 'Rahul Kumar Gupta', 'rg204880@gmail.com', '8777841197', 'Khandsa Sabji mandi', '2021-02-07 18:30:00'),
+(2, 'Rahul Kumar Gupta', 'rg204880@gmail.com', '8777841197', 'Khandsa Sabji mandi', '2021-02-07 18:30:00'),
+(3, 'Rahul Kumar Gupta', 'rg204880@gmail.com', '8777841197', 'Khandsa Sabji mandi', '2021-02-07 18:30:00'),
+(4, 'rahull', 'rg6568276@gmail.com', '8777841197', 'oyuuhbuioofyiygu', '2021-02-14 08:58:02'),
+(5, 'rahull', 'rg6568276@gmail.com', '8777841197', 'oyuuhbuioofyiygu', '2021-02-14 09:06:53'),
+(6, 'ssahid', 'khanshahid9283@gmail.com', '8777841197', 'jhlhbjk', '2021-02-14 09:07:37'),
+(7, 'golu', 'rg204880@gmail.com', '8777841197', 'hggfhd', '2021-02-14 09:11:24'),
+(8, 'Rahul Kumar Gupta', 'rg204880@gmail.com', '8777841197', 'gkgjg', '2021-02-14 09:28:25'),
+(9, 'shahid', 'khanshahid9283@gmail.com', '8777841197', 'a', '2021-02-14 09:40:12'),
+(10, 'shahid', 'khanshahid9283@gmail.com', '8777841197', 'a', '2021-02-14 09:42:56'),
+(11, 'jkd.qk', 'rg204880@gmail.com', '8777841197', 'dsdfarf', '2021-02-14 16:16:44'),
+(12, 'jkd.qk', 'rg204880@gmail.com', '8777841197', 'dsdfarf', '2021-02-14 16:27:59');
 
 -- --------------------------------------------------------
 
@@ -81,7 +99,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`

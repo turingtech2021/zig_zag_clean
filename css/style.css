@@ -160,7 +160,16 @@ html{
     word-spacing: .1rem;
 }
 
+.btn-group{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
 .swiper-article-btn{
+    display: inline-block;
     color: #fff;
     font-size: 1.2rem;
     font-weight: bold;

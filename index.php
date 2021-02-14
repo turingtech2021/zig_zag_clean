@@ -26,9 +26,9 @@
       $email = $_POST["email"];
       $phone = $_POST["phone"];
       $address = $_POST["address"];
-      $date = date("Y/m/d");
-      $sql = "INSERT INTO bookings (name, email, phone, address, date)
-      VALUES ('$name', '$email', '$phone', '$address', '$date')";
+      
+      $sql = "INSERT INTO bookings (name, email, phone, address)
+      VALUES ('$name', '$email', '$phone', '$address')";
 
       if (mysqli_query($conn, $sql)) {
         $success_msg= "Booking Successful";
@@ -40,7 +40,7 @@
 
   ?>
 
-
+<div class='error-msg'><i class="icofont-tags"></i>15% OFF ON FIRST SERVICE</div>
     <header class="header" id="home">
         <div class="header-top">
 
@@ -112,7 +112,10 @@
 
             </p>
 
+            <div class="btn-group">
             <a href="#" class="swiper-article-btn" id="book-now">Book Now <i class="icofont-rounded-right"></i></a>
+            <a href="tel:+919355348080" class="swiper-article-btn" >Call Now <i class="icofont-rounded-right"></i></a>
+            </div>
         </article>
     </div>
 

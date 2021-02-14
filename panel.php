@@ -25,6 +25,12 @@
     $result = mysqli_query($conn, $sql);
     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+    function totalRow($result){ 
+        $num =  mysqli_num_rows($result);
+        echo $num;
+        return $num;
+    }
+    $numRows = totalRow($result);
     function constructRow($row){ 
         $r="";  
         foreach($row as $key => $value) {
@@ -82,7 +88,7 @@
     <th>Email</th>
     <th>Phone</th>
     <th>Address</th>
-    <th>Date</th>
+    <th>Timestamp</th>
   </tr>
   <?php
     foreach($rows as $row) {
@@ -143,7 +149,6 @@
 </footer>
 
 <div class="copyright">Copyright Zig Zag Clean© 2017-<?php echo date("Y");?> - All rights reserved</div>
-
 </body>
 
 </html>
